@@ -1,0 +1,12 @@
+{
+  "name": "figma-slides",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "nuxt": "^2.3.4"
+  }
+}
