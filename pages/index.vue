@@ -79,26 +79,23 @@ export default{
     createPresentation() {
       this.creating = true
 
-      axios({
-        method: 'get',
-        url: `https://api.figma.com/v1/files/${this.figmaFileKey}`,
+      let figma = axios.create({
+        baseURL: 'https://api.figma.com',
         headers: {
           'X-FIGMA-TOKEN': this.figmaAccessToken
         }
-      }).then((response) => {
+      })
+
+      figma.get(`/v1/files/${this.figmaFileKey}`)
+      .then((response) => {
         let data   = response.data
         let title  = data.name
         let page   = data.document.children[0]
         let slides = page.children
         let ids    = slides.map(slide => slide.id)
 
-        axios({
-          method: 'get',
-          url: `https://api.figma.com/v1/images/${this.figmaFileKey}?ids=${ids.join(',')}`,
-          headers: {
-            'X-FIGMA-TOKEN': this.figmaAccessToken
-          }
-        }).then((response) => {
+        figma.get(`/v1/images/${this.figmaFileKey}?ids=${ids.join(',')}`)
+        .then((response) => {
           let data   = response.data
           let images = data.images
 
