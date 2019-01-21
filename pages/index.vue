@@ -26,8 +26,8 @@
       <p><button @click="deauthorize">Logout</button></p>
     </template>
     <template v-else>
-      <p>Please login with your Google account.</p>
-      <p><button @click="authorize">Authorize</button></p>
+      <p>This simple app can turn a Figma design file's frames into slides of a newly created Google Slides presentation. Please login with your Google account to get started.</p>
+      <p><button @click="authorize">Login with Google Acccount</button></p>
     </template>
   </section>
 </template>
