@@ -46,6 +46,46 @@ export default{
     }
   },
   head: {
+    title: 'Figma Slides',
+    meta: [
+      {
+        property: 'og:site_name',
+        content: 'Figma Slides'
+      }, {
+        property: 'og:image',
+        content: 'https://www.figmaslides.app/images/social.jpg'
+      }, {
+        property: 'og:title',
+        content: 'Figma Slides'
+      }, {
+        property: 'og:description',
+        content: 'Turn your Figma frames into Google Slides.'
+      }, {
+        property: 'og:url',
+        content: 'https://www.figmaslides.app'
+      }, {
+        property: 'og:type',
+        content: 'website'
+      }, {
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      }, {
+        name: 'twitter:site',
+        content: '@leemartin'
+      }, {
+        name: 'twitter:title',
+        content: 'Figma Slides'
+      }, {
+        name: 'twitter:description',
+        content: 'Turn your Figma frames into Google Slides.'
+      }, {
+        name: 'twitter:image',
+        content: 'https://www.figmaslides.app/images/social.jpg'
+      }, {
+        name: 'twitter:url',
+        content: 'https://www.figmaslides.app'
+      }
+    ],
     script: [
       {
         src: 'https://apis.google.com/js/api.js'
